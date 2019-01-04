@@ -1,7 +1,7 @@
 let http = require('http');
 let fs = require('fs');
-const express = require('express');
-const app = express();
+let express = require('express');
+let app = express();
 
 //404 response
 function send404Response(response) {
@@ -27,7 +27,7 @@ function onRequest(request, response) { // request = Was wurde vom User angefrag
 //AppEngine spezifische config, damit der Server Responses empfängt
 
 app.get('/', (req, res) => {
-    
+  //  res.render('/Tutorial/main/index.html');
     res.writeHead(200, {"Content-Type": "text/html"});
     fs.createReadStream("./Tutorial/main/index.html").pipe(res);
   });
