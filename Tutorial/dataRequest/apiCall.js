@@ -1,5 +1,6 @@
 var request = new XMLHttpRequest();
 
+
 //request.open( 'GET', '/dataRequest/data.txt', true);
 request.open( 'GET', 'https://api.iextrading.com/1.0/stock/aapl/price', true);
 request.send();
