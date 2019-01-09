@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TutorialHank</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form action="/" method="post">
+          <input name="company" type="text" class="ghost-input" placeholder="Enter company" required>
+          <input type="submit" class="ghost-button" value="Get current stock price">
+        </form>
+        <% if(locals.stock !== null){ %>
+          <p><%= locals.stock %></p>
+        <% } %>
+
+      </fieldset>
+    </div>
+  </body>
+</html>
